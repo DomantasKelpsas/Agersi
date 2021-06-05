@@ -15,3 +15,13 @@ export const GetMovies = async(dispatch) =>{
         console.log('Error!')
     }
 }
+
+export const DeleteMovie = async(dispatch, note) =>{
+
+    try{
+        dispatch(ActionCreators.deleteMovie(note));
+    }
+    catch{
+        console.log('Error!')
+    }
+}

@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { GetMovies } from '../services/movies'
+import { DeleteMovie, GetMovies } from '../services/movies';
+import {Button} from 'react-bootstrap';
 
 export const MoviesTable = () => {
     const movies = useSelector(state => state.moviesReducer.movies);
@@ -15,7 +16,10 @@ export const MoviesTable = () => {
             {
                 movies.map(n =>
                     <tr>
-                        <td style={{textAlign: 'left'}}>{n.value}</td>
+                        <td style={{ width: '3rem' }}>
+                            <Button className='btn btn-danger' onClick={() => DeleteMovie(dispatch, n)}>Delete</Button>
+                        </td>
+                        <td style={{ textAlign: 'left' }}>{n.value}</td>
                     </tr>
                 )
             }
