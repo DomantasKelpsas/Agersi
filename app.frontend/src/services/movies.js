@@ -16,10 +16,32 @@ export const GetMovies = async(dispatch) =>{
     }
 }
 
-export const DeleteMovie = async(dispatch, note) =>{
+export const DeleteMovie = async(dispatch, movie) =>{
 
     try{
-        dispatch(ActionCreators.deleteMovie(note));
+        dispatch(ActionCreators.deleteMovie(movie));
+    }
+    catch{
+        console.log('Error!')
+    }
+}
+
+export const NewMovie = async(dispatch, movie) =>{
+
+    try{
+        const response = {value: movie,id:4}         
+        dispatch(ActionCreators.newMovie(response));
+    }
+    catch{
+        console.log('Error!')
+    }
+}
+
+export const EditMovie = async(dispatch, movie) =>{
+
+    try{
+        const response = {value: movie,id:3}
+        dispatch(ActionCreators.editMovie(response));
     }
     catch{
         console.log('Error!')
