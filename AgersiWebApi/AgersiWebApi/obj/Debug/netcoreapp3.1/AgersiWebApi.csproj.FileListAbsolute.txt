@@ -63,3 +63,5 @@ C:\Users\Echo\Desktop\Agersi\AgersiWebApi\AgersiWebApi\bin\Debug\netcoreapp3.1\r
 C:\Users\Echo\Desktop\Agersi\AgersiWebApi\AgersiWebApi\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 C:\Users\Echo\Desktop\Agersi\AgersiWebApi\AgersiWebApi\bin\Debug\netcoreapp3.1\Movies.DB.dll
 C:\Users\Echo\Desktop\Agersi\AgersiWebApi\AgersiWebApi\bin\Debug\netcoreapp3.1\Movies.DB.pdb
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\AgersiWebApi\bin\Debug\netcoreapp3.1\Movies.Core.dll
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\AgersiWebApi\bin\Debug\netcoreapp3.1\Movies.Core.pdb

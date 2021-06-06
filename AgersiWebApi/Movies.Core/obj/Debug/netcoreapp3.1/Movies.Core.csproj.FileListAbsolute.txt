@@ -1,0 +1,12 @@
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.Core\bin\Debug\netcoreapp3.1\Movies.Core.deps.json
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.Core\bin\Debug\netcoreapp3.1\Movies.Core.dll
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.Core\bin\Debug\netcoreapp3.1\Movies.Core.pdb
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.Core\bin\Debug\netcoreapp3.1\Movies.DB.dll
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.Core\bin\Debug\netcoreapp3.1\Movies.DB.pdb
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.Core\obj\Debug\netcoreapp3.1\Movies.Core.csprojAssemblyReference.cache
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.Core\obj\Debug\netcoreapp3.1\Movies.Core.AssemblyInfoInputs.cache
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.Core\obj\Debug\netcoreapp3.1\Movies.Core.AssemblyInfo.cs
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.Core\obj\Debug\netcoreapp3.1\Movies.Core.csproj.CoreCompileInputs.cache
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.Core\obj\Debug\netcoreapp3.1\Movies.Core.csproj.CopyComplete
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.Core\obj\Debug\netcoreapp3.1\Movies.Core.dll
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.Core\obj\Debug\netcoreapp3.1\Movies.Core.pdb
