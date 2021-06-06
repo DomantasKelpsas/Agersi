@@ -8,5 +8,6 @@ namespace Movies.Core
     public interface IMoviesServices
     {
         Movie CreateMovie(Movie movie);
+        Movie GetMovie(int id);
     }
 }

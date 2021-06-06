@@ -24,10 +24,17 @@ namespace AgersiWebApi.Controllers
             _moviesServices = moviesServices;
         }
 
-        [HttpGet]
+        [HttpGet("{id}", Name = "GetMovie")]
+        public IActionResult GetMovie(int id)
+        {
+            return Ok(_moviesServices.GetMovie(id));
+        }
+
+        [HttpPost]
         public IActionResult CreateMovie(Movie movie)
         {
-            return Ok(_moviesServices.CreateMovie(movie));
+            var newMovie = _moviesServices.CreateMovie(movie);
+            return CreatedAtRoute("GetMovie", new { newMovie.Id }, newMovie);
         }
     }
 }

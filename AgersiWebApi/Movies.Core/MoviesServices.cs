@@ -1,5 +1,6 @@
 ﻿using Movies.DB;
 using System;
+using System.Linq;
 
 namespace Movies.Core
 {
@@ -16,8 +17,13 @@ namespace Movies.Core
         public Movie CreateMovie(Movie movie) {
             _context.Add(movie);
             _context.SaveChanges();
-
+            Console.WriteLine(movie);
             return movie;
+        }
+
+        public Movie GetMovie(int id)
+        {
+           return _context.Movies.First(n => n.Id == id);                    
         }
     }
 }
