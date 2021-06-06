@@ -25,7 +25,7 @@ export const EditMovieModal = ({ movie }) => {
     const handleShow = () => setShow(true);
 
     return <div>
-        <Button onClick={handleShow} className='btn btn-warning'>Edit Movie</Button>
+        <Button onClick={handleShow} className='btn btn-warning'>Edit</Button>
         <MovieModal movie={movie} handleFormSubmit={EditMovie} show={show} handleClose={handleClose} />
 
     </div>
