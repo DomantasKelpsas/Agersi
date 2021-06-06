@@ -1,15 +1,16 @@
 import { ActionCreators } from "../redux/moviesReducer";
+import * as axios from 'axios';
+
+const axiosInstance = axios.create({
+    baseURL: 'https://localhost:5001/movies',
+})
 
 export const GetMovies = async(dispatch) =>{
 
     try{
-        const response = [
-            {value: 'Interzone',id:1},
-            {value: 'Interstela',id:2},
-            {value: 'Godfather',id:3},
-        ];
+        const {data} = await axiosInstance.get();
 
-        dispatch(ActionCreators.setMovies(response));
+        dispatch(ActionCreators.setMovies(data));
     }
     catch{
         console.log('Error!')
@@ -19,6 +20,7 @@ export const GetMovies = async(dispatch) =>{
 export const DeleteMovie = async(dispatch, movie) =>{
 
     try{
+        await axiosInstance.delete(`/${movie.id}`);
         dispatch(ActionCreators.deleteMovie(movie));
     }
     catch{
@@ -29,8 +31,8 @@ export const DeleteMovie = async(dispatch, movie) =>{
 export const NewMovie = async(dispatch, movie) =>{
 
     try{
-        const response = {value: movie,id:4}         
-        dispatch(ActionCreators.newMovie(response));
+        const {data} = await axiosInstance.post('',movie);       
+        dispatch(ActionCreators.newMovie(data));
     }
     catch{
         console.log('Error!')
@@ -40,8 +42,8 @@ export const NewMovie = async(dispatch, movie) =>{
 export const EditMovie = async(dispatch, movie) =>{
 
     try{
-        const response = {value: movie,id:3}
-        dispatch(ActionCreators.editMovie(response));
+        await axiosInstance.put('',movie);    
+        dispatch(ActionCreators.editMovie(movie));
     }
     catch{
         console.log('Error!')

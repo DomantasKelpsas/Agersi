@@ -6,7 +6,6 @@ import { NewMovie, EditMovie } from '../services/movies'
 export const NewMovieModal = () => {
 
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -20,7 +19,6 @@ export const NewMovieModal = () => {
 export const EditMovieModal = ({ movie }) => {
 
     const [show, setShow] = useState(false);
-
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
@@ -33,7 +31,7 @@ export const EditMovieModal = ({ movie }) => {
 
 const MovieModal = ({ movie, handleFormSubmit, show, handleClose }) => {
 
-    const [modalMovie, setModalMovie] = useState('');
+    const [modalMovie, setModalMovie] = useState({});
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -51,8 +49,8 @@ const MovieModal = ({ movie, handleFormSubmit, show, handleClose }) => {
             }}>
                 <Modal.Body>
                     <InputGroup>
-                        <FormControl value={modalMovie === null ? '' : modalMovie} onChange={event =>
-                            setModalMovie(event.target.value)
+                        <FormControl value={modalMovie === null ? '' : modalMovie.value} onChange={event =>
+                            setModalMovie({...modalMovie, value: event.target.value})
                         }>
                         </FormControl>
                     </InputGroup>

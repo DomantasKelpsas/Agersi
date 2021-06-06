@@ -18,7 +18,7 @@ export const MoviesTable = () => {
                 movies.map(n =>
                     <tr>
                         <td style={{ width: '3rem' }}>
-                            <EditMovieModal movie={n.value}/>
+                            <EditMovieModal movie={n}/>
                         </td>
                         <td style={{ width: '3rem' }}>
                             <Button className='btn btn-danger' onClick={() => DeleteMovie(dispatch, n)}>Delete</Button>

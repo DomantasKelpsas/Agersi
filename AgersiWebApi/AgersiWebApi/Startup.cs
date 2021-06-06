@@ -30,6 +30,15 @@ namespace AgersiWebApi
             services.AddControllers();
             services.AddDbContext<AppDbContext>();
             services.AddTransient<IMoviesServices, MoviesServices>();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("MoviesPolicy", builder =>
+                {
+                    builder.WithOrigins("*")
+                    .AllowAnyHeader()
+                    .AllowAnyMethod();
+                });
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -43,6 +52,8 @@ namespace AgersiWebApi
             app.UseHttpsRedirection();
 
             app.UseRouting();
+
+            app.UseCors("MoviesPolicy");
 
             app.UseAuthorization();
 
