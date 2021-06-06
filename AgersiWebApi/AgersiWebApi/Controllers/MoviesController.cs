@@ -24,6 +24,12 @@ namespace AgersiWebApi.Controllers
             _moviesServices = moviesServices;
         }
 
+        [HttpGet]
+        public IActionResult GetMovies()
+        {
+            return Ok(_moviesServices.GetMovies());
+        }
+
         [HttpGet("{id}", Name = "GetMovie")]
         public IActionResult GetMovie(int id)
         {
@@ -35,6 +41,19 @@ namespace AgersiWebApi.Controllers
         {
             var newMovie = _moviesServices.CreateMovie(movie);
             return CreatedAtRoute("GetMovie", new { newMovie.Id }, newMovie);
+        }
+
+        [HttpDelete("{id}")]
+        public IActionResult DeleteMovie(int id)
+        {
+             _moviesServices.DeleteMovie(id);
+            return Ok();
+        }
+        [HttpPut]
+        public IActionResult EditMovie([FromBody] Movie movie)
+        {
+            _moviesServices.EditMovie(movie);
+            return Ok();
         }
     }
 }

@@ -9,5 +9,8 @@ namespace Movies.Core
     {
         Movie CreateMovie(Movie movie);
         Movie GetMovie(int id);
+        void DeleteMovie(int id);
+        void EditMovie(Movie movie);
+        List<Movie> GetMovies();
     }
 }
