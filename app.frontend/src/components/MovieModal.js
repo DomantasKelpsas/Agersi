@@ -51,7 +51,7 @@ const MovieModal = ({ movie, handleFormSubmit, show, handleClose }) => {
                     <FormGroup>
                         <Form.Label>Movie Title</Form.Label>
                         <InputGroup>
-                            <FormControl value={modalMovie === null ? '' : modalMovie.title} onChange={event =>
+                            <FormControl name="title" value={modalMovie === null ? '' : modalMovie.title} onChange={event =>
                                 setModalMovie({ ...modalMovie, title: event.target.value })
                             }>
                             </FormControl>
@@ -60,7 +60,7 @@ const MovieModal = ({ movie, handleFormSubmit, show, handleClose }) => {
                     <FormGroup>
                         <Form.Label>Movie Release Date</Form.Label>
                         <InputGroup>
-                            <FormControl type="date" value={modalMovie === null ? '' : modalMovie.releaseDate} onChange={event =>
+                            <FormControl name="releaseDate" type="date" value={modalMovie === null ? '' : modalMovie.releaseDate} onChange={event =>
                                 setModalMovie({ ...modalMovie, releaseDate: event.target.value })
                             }>
                             </FormControl>
@@ -69,13 +69,14 @@ const MovieModal = ({ movie, handleFormSubmit, show, handleClose }) => {
                     <FormGroup>
                         <Form.Label>Movie Genre</Form.Label>
                         <InputGroup>
-                            <FormControl as="select" value={modalMovie === null ? '' : modalMovie.genre} onChange={event =>
+                            <FormControl as="select" name="genre" value={modalMovie === null ? '' : modalMovie.genre} onChange={event =>
                                 setModalMovie({ ...modalMovie, genre: event.target.value })
                             }>
 
+                                
+                                <option value="Action">Action</option>
                                 <option value="Drama">Drama</option>
                                 <option value="Comedy">Comedy</option>
-                                <option value="Action">Action</option>
 
                             </FormControl>
                         </InputGroup>

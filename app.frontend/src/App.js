@@ -6,9 +6,9 @@ import { MoviesTable } from './components/MoviesTable';
 function App() {
   return (
     <div className="App">
-      <h2>Movies</h2>
+      <h1 className="p-4 m-4">Movies List</h1>
       <div>
-        <div>
+        <div className="pl-5 my-1 float-left">
           <NewMovieModal/>
         </div>
         <MoviesTable/>
