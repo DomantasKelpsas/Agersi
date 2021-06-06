@@ -1,6 +1,5 @@
 C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.DB\bin\Debug\netcoreapp3.1\Movies.DB.deps.json
 C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.DB\bin\Debug\netcoreapp3.1\Movies.DB.dll
-C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.DB\obj\Debug\netcoreapp3.1\Movies.DB.csprojAssemblyReference.cache
 C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.DB\obj\Debug\netcoreapp3.1\Movies.DB.AssemblyInfoInputs.cache
 C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.DB\obj\Debug\netcoreapp3.1\Movies.DB.AssemblyInfo.cs
 C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.DB\bin\Debug\netcoreapp3.1\Movies.DB.runtimeconfig.json
@@ -10,3 +9,4 @@ C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.DB\obj\Debug\netcoreapp3.1\Movi
 C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.DB\obj\Debug\netcoreapp3.1\Movies.DB.dll
 C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.DB\obj\Debug\netcoreapp3.1\Movies.DB.pdb
 C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.DB\obj\Debug\netcoreapp3.1\Movies.DB.genruntimeconfig.cache
+C:\Users\Echo\Desktop\Agersi\AgersiWebApi\Movies.DB\obj\Debug\netcoreapp3.1\Movies.DB.csprojAssemblyReference.cache

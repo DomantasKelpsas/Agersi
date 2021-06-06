@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { Button, Modal, Form, FormControl, InputGroup } from 'react-bootstrap';
+import { Button, Modal, Form, FormControl, InputGroup, FormGroup } from 'react-bootstrap';
 import { NewMovie, EditMovie } from '../services/movies'
 
 export const NewMovieModal = () => {
@@ -41,19 +41,45 @@ const MovieModal = ({ movie, handleFormSubmit, show, handleClose }) => {
     return (
         <Modal show={show} onHide={handleClose}>
             <Modal.Header closeButton>
-                <Modal.Title>Modal heading</Modal.Title>
+                <Modal.Title>Movie Info</Modal.Title>
             </Modal.Header>
             <Form onSubmit={event => {
                 event.preventDefault();
                 handleFormSubmit(dispatch, modalMovie);
             }}>
                 <Modal.Body>
-                    <InputGroup>
-                        <FormControl value={modalMovie === null ? '' : modalMovie.value} onChange={event =>
-                            setModalMovie({...modalMovie, value: event.target.value})
-                        }>
-                        </FormControl>
-                    </InputGroup>
+                    <FormGroup>
+                        <Form.Label>Movie Title</Form.Label>
+                        <InputGroup>
+                            <FormControl value={modalMovie === null ? '' : modalMovie.title} onChange={event =>
+                                setModalMovie({ ...modalMovie, title: event.target.value })
+                            }>
+                            </FormControl>
+                        </InputGroup>
+                    </FormGroup>
+                    <FormGroup>
+                        <Form.Label>Movie Release Date</Form.Label>
+                        <InputGroup>
+                            <FormControl type="date" value={modalMovie === null ? '' : modalMovie.releaseDate} onChange={event =>
+                                setModalMovie({ ...modalMovie, releaseDate: event.target.value })
+                            }>
+                            </FormControl>
+                        </InputGroup>
+                    </FormGroup>
+                    <FormGroup>
+                        <Form.Label>Movie Genre</Form.Label>
+                        <InputGroup>
+                            <FormControl as="select" value={modalMovie === null ? '' : modalMovie.genre} onChange={event =>
+                                setModalMovie({ ...modalMovie, genre: event.target.value })
+                            }>
+
+                                <option value="Drama">Drama</option>
+                                <option value="Comedy">Comedy</option>
+                                <option value="Action">Action</option>
+
+                            </FormControl>
+                        </InputGroup>
+                    </FormGroup>
                 </Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={handleClose}>

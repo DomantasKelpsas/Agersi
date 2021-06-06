@@ -37,7 +37,9 @@ namespace Movies.Core
         public void EditMovie(Movie movie)
         {
             var editedMovie = _context.Movies.First(n => n.Id == movie.Id);
-            editedMovie.value = movie.value;
+            editedMovie.title = movie.title;
+            editedMovie.releaseDate = movie.releaseDate;
+            editedMovie.genre = movie.genre;
             _context.SaveChanges();
         }
 

@@ -35,8 +35,10 @@ export default function MoviesReducer(state = initialState, action) {
         case ActionTypes.EDIT_MOVIE:
             for (let i = 0; i < state.movies.length; i++) {
                 if (state.movies[i].id === action.payload.id) {
-                    state.movies[i].value = action.payload.value;
-                    break;                  
+                    state.movies[i].title = action.payload.title;
+                    state.movies[i].genre = action.payload.genre;
+                    state.movies[i].releaseDate = action.payload.releaseDate;
+                    break;
                 }
             }
             return { ...state, movies: [...state.movies] };

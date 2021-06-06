@@ -23,7 +23,9 @@ export const MoviesTable = () => {
                         <td style={{ width: '3rem' }}>
                             <Button className='btn btn-danger' onClick={() => DeleteMovie(dispatch, n)}>Delete</Button>
                         </td>
-                        <td style={{ textAlign: 'left' }}>{n.value}</td>
+                        <td style={{ textAlign: 'left' }}>{n.title}</td>
+                        <td style={{ textAlign: 'left' }}>{n.releaseDate.split('T')[0]}</td>
+                        <td style={{ textAlign: 'left' }}>{n.genre}</td>
                     </tr>
                 )
             }
